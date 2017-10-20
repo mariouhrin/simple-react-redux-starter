@@ -1,0 +1,13 @@
+{
+  "presets": [
+    ["env", {
+      "loose": true,
+      "modules": false
+    }],
+    "react"
+  ],
+  "plugins": [
+    "transform-object-rest-spread",
+    "react-hot-loader/babel"
+  ]
+}

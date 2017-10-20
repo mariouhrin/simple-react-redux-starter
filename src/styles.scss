@@ -1,0 +1,25 @@
+body {
+  background: red;
+}
+
+.my-div {
+  display: flex;
+  transition: all .5s;
+  user-select: none;
+}
+
+p {
+  height: 100px;
+  width: 100px;
+}
+
+span {
+  height: 100px;
+  width: 100px;
+}
+
+@media (min-resolution: 2dppx) {
+  .my-test {
+      display: flex;
+  }
+}
