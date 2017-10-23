@@ -26,7 +26,6 @@ __snapshots__
 build/Release
 
 # Dependency directory
-# https://www.npmjs.org/doc/misc/npm-faq.html#should-i-check-my-node_modules-folder-into-git
 node_modules
 
 # Ignore build files
@@ -34,3 +33,9 @@ dist
 
 # Ignore yarn files
 yarn.lock
+
+# Ignore package-lock.json
+package-lock.json
+
+# vscode settings
+.vscode/settings.json

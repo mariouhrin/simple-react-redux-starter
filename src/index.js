@@ -6,14 +6,17 @@ import App from './app'
 import './normalize.css'
 import './styles.scss'
 
-const render = Component => {
+const rootElement = document.getElementById('root')
+
+/* eslint-disable react/no-render-return-value */
+const render = Component => (
   ReactDOM.render(
     <AppContainer>
       <Component />
     </AppContainer>,
-    document.getElementById('root'),
+    rootElement,
   )
-}
+)
 
 render(App)
 

@@ -1,8 +1,8 @@
-const webpack = require('webpack');
-const merge = require('webpack-merge');
-const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
+const webpack = require('webpack')
+const merge = require('webpack-merge')
+const UglifyJSPlugin = require('uglifyjs-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
-const common = require('./webpack.common.js');
+const common = require('./webpack.common.js')
 
 const extractNormalize = new ExtractTextPlugin('normalize.css')
 const extractStyleSCSS = new ExtractTextPlugin('style.css')
@@ -18,21 +18,21 @@ module.exports = merge(common, {
         test: /\.scss$/,
         use: extractStyleSCSS.extract({
           use: [
-            { loader: "css-loader", options: { importLoaders: 2, minimize: true } }, 
-            { loader: "postcss-loader" },
-            { loader: "sass-loader" }
+            { loader: 'css-loader', options: { importLoaders: 2, minimize: true } }, 
+            { loader: 'postcss-loader' },
+            { loader: 'sass-loader' }
           ],
-          fallback: "style-loader"
+          fallback: 'style-loader'
         })
       },
       {
         test: /\.css$/,
         use: extractNormalize.extract({
           use: [
-            { loader: "css-loader", options: { importLoaders: 1,  minimize: true } },
-            { loader: "postcss-loader" },
+            { loader: 'css-loader', options: { importLoaders: 1, minimize: true } },
+            { loader: 'postcss-loader' },
           ],
-          fallback: "style-loader"
+          fallback: 'style-loader'
         })
       }
     ]
@@ -49,4 +49,4 @@ module.exports = merge(common, {
     extractNormalize,
     extractStyleSCSS
   ]
-});
+})
