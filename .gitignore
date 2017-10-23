@@ -38,4 +38,4 @@ yarn.lock
 package-lock.json
 
 # vscode settings
-.vscode/*
+/.vscode/
