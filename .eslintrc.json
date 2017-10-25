@@ -1,6 +1,6 @@
 {
   "parser": "babel-eslint",
-  "extends": "airbnb",
+  "extends": ["airbnb", "prettier"],
   "parserOptions": {
     "ecmaVersion": 8,
     "ecmaFeatures": {
@@ -12,21 +12,18 @@
     "browser": true,
     "node": true
   },
-  "plugins": [
-    "react",
-    "jsx-a11y",
-    "import"
-  ],
+  "plugins": ["react", "jsx-a11y", "import"],
   "rules": {
     "dot-notation": "off",
     "no-console": "off",
-    "max-len": ["warn", 140, 2],
+    "max-len": ["warn", 80, 2],
     "no-cond-assign": ["error", "except-parens"],
     "no-else-return": "warn",
     "no-use-before-define": ["error", { "functions": false, "classes": false }],
     "react/jsx-boolean-value": "warn",
-    "react/jsx-closing-bracket-location": ["error", "after-props"],
+    "react/jsx-closing-bracket-location": 1,
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "react/jsx-max-props-per-line": [1, { "maximum": 1 }],
     "react/prop-types": "warn",
     "semi": ["error", "never"],
     "quote-props": ["error", "consistent"]
