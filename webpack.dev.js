@@ -5,7 +5,7 @@ const webpack = require('webpack')
 module.exports = merge(common, {
   entry: [
     'react-hot-loader/patch',
-    './src/index.js'
+    './src/js/index.js'
   ],
   devtool: 'inline-source-map',
   devServer: {
@@ -24,14 +24,6 @@ module.exports = merge(common, {
           { loader: 'sass-loader' }
         ]
       },
-      {
-        test: /\.css$/,
-        exclude: /node_modules/,
-        use: [
-          'style-loader', 
-          'css-loader', 
-        ]
-      }
     ]
   },
   plugins: [
