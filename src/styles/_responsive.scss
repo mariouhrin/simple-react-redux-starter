@@ -1,0 +1,45 @@
+@import 'variables';
+
+@mixin break($size) {
+  @if $size == 'xs' {
+    @media (max-width: map-get($breakpoints, $size)) {
+      @content;
+    }
+  } @else {
+    @media (min-width: map-get($breakpoints, $size)) {
+      @content;
+    }
+  }
+}
+
+// grid container
+.grid {
+  display: flex;
+  margin-bottom: 1rem;
+
+  flex-flow: row wrap;
+}
+
+// grid item
+.grid__item {
+  padding: 0.5rem;
+
+  &:nth-child(even) {
+    background-color: $grey;
+  }
+
+  &:nth-child(odd) {
+    background-color: $darker-grey;
+  }
+}
+
+// loop over the breakpoints
+@each $key, $value in $breakpoints {
+  @for $i from 1 through $items {
+    .grid__item--#{$key}-span-#{$i} {
+      @include break($key) {
+        width: #{$i / $items * 100%};
+      }
+    }
+  }
+}

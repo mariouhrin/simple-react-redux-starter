@@ -1,9 +1,6 @@
 import React from 'react'
+import Grid from './components/grid'
 
-const App = () => (
-  <article className="test-mixins">
-    <section>Default Section</section>
-  </article>
-)
+const App = () => <Grid />
 
 export default App
