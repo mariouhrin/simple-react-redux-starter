@@ -36,7 +36,7 @@
 // loop over the breakpoints
 @each $key, $value in $breakpoints {
   @for $i from 1 through $items {
-    .grid__item--#{$key}-span-#{$i} {
+    .col-#{$key}-#{$i} {
       @include break($key) {
         width: #{$i / $items * 100%};
       }

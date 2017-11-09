@@ -1,19 +1,17 @@
 import React from 'react'
 
 const Grid = () => (
-  <article className="grid">
-    <div className="grid__item grid__item--lg-span-8 grid__item--xs-span-1 grid__item--sm-span-3">
-      xs-1
-    </div>
-    <div className="grid__item grid__item--lg-span-1 grid__item--xs-span-2 grid__item--sm-span-3">
-      xs-2
-    </div>
-    <div className="grid__item grid__item--lg-span-1 grid__item--xs-span-3 grid__item--sm-span-3">
-      xs-3
-    </div>
-    <div className="grid__item grid__item--lg-span-2 grid__item--xs-span-6 grid__item--sm-span-3">
-      xs-6
-    </div>
+  <article className="component-style">
+    <header>
+      <h2>Responsonsive Grid by SCSS</h2>
+      <p>It has two thresholds</p>
+    </header>
+    <section className="grid">
+      <div className="grid__item col-lg-6 col-xs-2 col-sm-3">First column</div>
+      <div className="grid__item col-lg-3 col-xs-3 col-sm-3">Second column</div>
+      <div className="grid__item col-lg-2 col-xs-5 col-sm-3">Third column</div>
+      <div className="grid__item col-lg-1 col-xs-2 col-sm-3">Fourth column</div>
+    </section>
   </article>
 )
 

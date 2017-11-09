@@ -1,12 +1,12 @@
 import React from 'react'
 import Grid from './components/grid'
-import ButtonAlert from './components/buttonAlert'
+import ButtonCounter from './components/buttonCounter'
 
 const App = () => (
-  <main>
+  <main className="page-wrapper">
     <Grid />
-    <ButtonAlert />
+    <ButtonCounter />
   </main>
-  )
+)
 
 export default App
